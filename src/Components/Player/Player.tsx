@@ -12,6 +12,7 @@ const Player = (props: IProps) => {
         <div className="bodyDiv">
             <button onClick={() => props.moveBackward(2)}>Down</button>
             <button onClick={() => props.moveForward(0)}>Up</button>
+            
         </div>
     )
 }
