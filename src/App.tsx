@@ -42,25 +42,20 @@ function App() {
   const [sound, setSound] = useState(playlist[0])
 
   const moveForward = (id: number) => {
-    console.log("clicked")
     if (id === tracks.length) {
       setSound(playlist[0])
-      console.log(playlist[0])
     }
     else {
-      setSound(playlist[id+1])
-      console.log(playlist[id+1])
+      setSound(playlist[id])
     }
   }
 
   const moveBackward = (id: number) => {
-    if (id === tracks.length) {
-      setSound(playlist[tracks.length])
-      console.log(playlist[tracks.length])
+    if (id === 1) {
+      setSound(playlist[tracks.length - 1])
     }
     else {
-      setSound(playlist[id-1])
-      console.log(playlist[id-1])
+      setSound(playlist[id-2])
     }
   }
 

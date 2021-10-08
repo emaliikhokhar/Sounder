@@ -8,6 +8,7 @@
     color: white;
     border-radius: 20px;
     letter-spacing: 2px;
+    user-select: none;
 }
 
 .mainDiv {

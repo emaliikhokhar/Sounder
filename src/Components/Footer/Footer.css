@@ -7,4 +7,5 @@
     margin-left: 8.65%;
     color: white;
     border-radius: 20px;
+    user-select: none;
 }
