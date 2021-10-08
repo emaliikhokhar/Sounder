@@ -5,26 +5,36 @@ import Header from './Components/Header/Header';
 import Player from './Components/Player/Player';
 
 function App() {
-  let tracks = [
+  interface typedObject {
+    id: number,
+    name: string,
+    artist: string,
+    soundKey: string
+  }
+  let tracks: typedObject[] = [
     {
       id: 1,
       name: "Mustafa Jaan-e-Rehmat",
       artist: "Atif Aslam",
+      soundKey: "MustafaJaanERehmat"
     },
     {
       id: 2,
       name: "Ae Saba Mustafa",
       artist: "Rafaqat Ali Khan",
+      soundKey: "AeSabaMustafa"
     },
     {
       id: 3,
       name: "Mera Dil Badal De",
       artist: "Junaid Jamshed",
+      soundKey: "MeraDilBadalDe"
     },
     {
       id: 4,
       name: "Sehar Ka Waqt Tha",
       artist: "Arbaaz",
+      soundKey: "SeharKaWaqtTha"
     }
   ]
 
