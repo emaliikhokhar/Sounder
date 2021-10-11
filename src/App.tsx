@@ -63,7 +63,7 @@ function App() {
     <div className="App-header">
       <Header heading="Sounder App"/>
       <Player playlist={playlist} soundActive={sound} moveForward={moveForward} moveBackward={moveBackward}/>
-      <Footer outro="Powered by " poweredBy = "Ali A. Khokhar"/>
+      <Footer outro="Developed by " poweredBy = "Ali A. Khokhar"/>
     </div>
   );
 }

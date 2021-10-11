@@ -5,6 +5,7 @@ import MeraDilBadalDe from '../../Images/Mera Dil Badal De.jpg'
 import SeharKaWaqtTha from '../../Images/Sehar Ka Waqt Tha.jpg'
 import { MdArrowForwardIos, MdArrowBackIosNew, MdOutlinePause, MdOutlinePlayArrow } from "react-icons/md";
 import { useState } from "react"
+import MustafaAudio from '../../Soundtracks/Mustafa Jaan-e-Rehmat.mp3'
 
 interface IProps {
     playlist: Object,
@@ -16,6 +17,7 @@ interface IProps {
 const Player = (props: IProps) => {
     let temp: any = props.soundActive;
     const [pause, setPause] = useState(false);
+    let audio = new Audio(MustafaAudio);
     const pauseTheTrack = () => {
         setPause(true);
     }
@@ -27,16 +29,20 @@ const Player = (props: IProps) => {
             <div>
                 <div className="imgDisplay">
                     {
-                        temp.name === "Mustafa Jaan-e-Rehmat" ? <img src={MustafaJaanERehmat} alt="AlbumPhoto" className="imgClass" /> : null
+                        temp.name === "Mustafa Jaan-e-Rehmat" ? 
+                        <img src={MustafaJaanERehmat} alt="AlbumPhoto" className="imgClass" /> : null
                     }
                     {
-                        temp.name === "Ae Saba Mustafa" ? <img src={AeSabaMustafa} alt="AlbumPhoto" className="imgClass" /> : null
+                        temp.name === "Ae Saba Mustafa" ? 
+                        <img src={AeSabaMustafa} alt="AlbumPhoto" className="imgClass" /> : null
                     }
                     {
-                        temp.name === "Mera Dil Badal De" ? <img src={MeraDilBadalDe} alt="AlbumPhoto" className="imgClass" /> : null
+                        temp.name === "Mera Dil Badal De" ?
+                         <img src={MeraDilBadalDe} alt="AlbumPhoto" className="imgClass" /> : null
                     }
                     {
-                        temp.name === "Sehar Ka Waqt Tha" ? <img src={SeharKaWaqtTha} alt="AlbumPhoto" className="imgClass" /> : null
+                        temp.name === "Sehar Ka Waqt Tha" ? 
+                        <img src={SeharKaWaqtTha} alt="AlbumPhoto" className="imgClass" /> : null
                     }
                 </div>
                 <div className="titleDisplay">
@@ -55,10 +61,10 @@ const Player = (props: IProps) => {
                     {
                         pause ?
                             <div className="icons" >
-                                <MdOutlinePlayArrow onClick={() => { return playTheTrack() }} />
+                                <MdOutlinePlayArrow onClick={() => { return playTheTrack(), audio.play() }} />
                             </div> :
                             <div className="icons" >
-                                <MdOutlinePause onClick={() => { return pauseTheTrack() }} />
+                                <MdOutlinePause onClick={() => { return pauseTheTrack(), audio.pause() }} />
                             </div>
                     }
                     <div className="icons" >
