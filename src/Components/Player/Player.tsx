@@ -21,8 +21,6 @@ const Player = (props: IProps) => {
     let temp: any = props.soundActive;
     const audioEl:any = useRef(null);
     const [isPlaying, setIsPlaying] = useState(true);
-    
-   
     useEffect(() => {
         if (isPlaying) {
             audioEl.current.play();
@@ -31,7 +29,6 @@ const Player = (props: IProps) => {
             audioEl.current.pause();
         }
     })
-
     const pauseTheTrack = () => {
         setIsPlaying(false);
     }
@@ -76,19 +73,19 @@ const Player = (props: IProps) => {
                     {/* Audio */}
                     {
                         temp.name === "Mustafa Jaan-e-Rehmat" ?
-                        <audio src={MustafaJaanERehmatAudio} ref={audioEl} autoPlay /> : null
+                        <audio src={MustafaJaanERehmatAudio} ref={audioEl} preload="auto" /> : null
                     }
                     {
                         temp.name === "Ae Saba Mustafa" ?
-                        <audio src={AeSabaMustafaAudio} ref={audioEl} autoPlay /> : null
+                        <audio src={AeSabaMustafaAudio} ref={audioEl} preload="auto" /> : null
                     }
                     {
                         temp.name === "Mera Dil Badal De" ?
-                        <audio src={MeraDilBadalDeAudio} ref={audioEl} autoPlay /> : null
+                        <audio src={MeraDilBadalDeAudio} ref={audioEl} preload="auto" /> : null
                     }
                     {
                         temp.name === "Sehar Ka Waqt Tha" ?
-                        <audio src={SeharKaWaqtThaAudio} ref={audioEl} autoPlay /> : null
+                        <audio src={SeharKaWaqtThaAudio} ref={audioEl} preload="auto" /> : null
                     }
                     
                     {

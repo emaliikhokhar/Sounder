@@ -3,6 +3,10 @@ import './App.css';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Player from './Components/Player/Player';
+import MustafaJaanERehmatAudio from '../../Soundtracks/Mustafa Jaan-e-Rehmat.mp3'
+import AeSabaMustafaAudio from '../../Soundtracks/AeSabaMustafa.mp3'
+import MeraDilBadalDeAudio from '../../Soundtracks/Mera Dil Badal De.mp3'
+import SeharKaWaqtThaAudio from '../../Soundtracks/Sehar Ka Waqt Tha.mp3'
 
 function App() {
   interface typedObject {
@@ -37,9 +41,9 @@ function App() {
       soundKey: "SeharKaWaqtTha"
     }
   ]
-
   const [playlist] = useState(tracks);
   const [sound, setSound] = useState(playlist[0])
+
 
   const moveForward = (id: number) => {
     if (id === tracks.length) {
@@ -61,7 +65,7 @@ function App() {
 
   return (
     <div className="App-header">
-      <Header heading="Sounder App"/>
+      <Header heading="SOUNDER"/>
       <Player playlist={playlist} soundActive={sound} moveForward={moveForward} moveBackward={moveBackward}/>
       <Footer outro="Developed by " poweredBy = "Ali A. Khokhar"/>
     </div>
